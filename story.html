@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--Coded by hunieday ! P:-->
+<html lang="ENGLISH">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initia-scale=1.0">
+         <title>Resonance of Arca Song ENGLISH FANSITE</title>
+         <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <!--Header  / Navigation Bar-->
+        <header>
+            <nav class="navbar section-content">
+<div class="nav-logo">
+    <img src="https://idolish7.com/rac/img/home/kv/logo_arcasong.png" alt="Resonance of Arca Song Logo" class="logo-img">
+</div>
+<ul class="nav-menu">
+    <li class="nav-item">
+        <a href="index.html" class="nav-link">HOME</a>
+    </li>
+   <li class="nav-item">
+        <a href="characters.html" class="nav-link">CHARACTERS</a>
+    </li>
+    <li class="nav-item">
+        <a href="glossary.html" class="nav-link">GLOSSARY</a>
+    </li>
+    <li class="nav-item">
+        <a href="story.html" class="nav-link">STORY</a>
+    </li>
+    <li class="nav-item">
+        <a href="external links.html" class="nav-link">EXTERNAL LINKS</a>
+    </li>
+</ul>
+
+            </nav>
+            
+        </header>
+        
+<main>
+    <!--Hero section-->
+   <main>
+    <div class="section-content">
+        
+        <h1 class="story-page-title">STORY</h1>
+        
+        <div class="seasons-grid">
+            <!-- Season 1 (Active) -->
+            <div class="season-card">
+                <a href="season1.html" class="thumbnail-wrapper">
+                    <img src="https://pbs.twimg.com/media/HMnZ5KBXQAASWpU?format=png&name=900x900" alt="Season 1 CG">
+                </a>
+                <h3 class="season-title">SEASON ONE</h3>
+            </div>
+
+            <!-- Season 2 (Locked) -->
+            <div class="season-card locked">
+                <div class="thumbnail-wrapper">
+                    <img src="https://pbs.twimg.com/media/HMnZ5KBXQAASWpU?format=png&name=900x900" alt="Season 2 Placeholder">
+                    <div class="coming-soon-overlay">
+                        <span>COMING SOON...</span>
+                    </div>
+                </div>
+                <h3 class="season-title">SEASON TWO</h3>
+            </div>
+
+            <!-- Season 3 (Locked) -->
+            <div class="season-card locked">
+                <div class="thumbnail-wrapper">
+                    <img src="https://pbs.twimg.com/media/HMh5LKAbIAAQbod?format=jpg&name=medium" alt="Season 3 Placeholder">
+                    <div class="coming-soon-overlay">
+                        <span>COMING SOON...</span>
+                    </div>
+                </div>
+                <h3 class="season-title">SEASON THREE</h3>
+            </div>
+
+            <!-- Season 4 (Locked) -->
+            <div class="season-card locked">
+                <div class="thumbnail-wrapper">
+                    <img src="https://pbs.twimg.com/media/HMh5LKAbIAAQbod?format=jpg&name=medium" alt="Season 4 Placeholder">
+                    <div class="coming-soon-overlay">
+                        <span>COMING SOON...</span>
+                    </div>
+                </div>
+                <h3 class="season-title">SEASON FOUR</h3>
+            </div>
+        </div>
+
+    </div>
+ 
+</section>
+<!--Footer section-->
+<footer class="footer-section">
+    <div class="section-content">
+        <p class="credit"> 2026 © Coded by hunieday.</p>
+    </div>
+</footer>
+</main>
+<script src="script.js">document.addEventListener("DOMContentLoaded", () => {
+    const fadeElements = document.querySelectorAll(".scroll-fade");
+
+    const observerOptions = {
+        root: null,         
+        threshold: 0.15,    
+        rootMargin: "0px"   
+    };
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("appear");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    fadeElements.forEach(element => {
+        scrollObserver.observe(element);
+    });
+});</script>
+    </body>
+</html>

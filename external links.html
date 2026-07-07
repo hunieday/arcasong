@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--Coded by hunieday ! P:-->
+<html lang="ENGLISH">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initia-scale=1.0">
+         <title>Resonance of Arca Song ENGLISH FANSITE</title>
+         <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <script src="script.js"></script>
+        <!--Header  / Navigation Bar-->
+        <header>
+            <nav class="navbar section-content">
+<div class="nav-logo">
+    <img src="https://idolish7.com/rac/img/home/kv/logo_arcasong.png" alt="Resonance of Arca Song Logo" class="logo-img">
+</div>
+<ul class="nav-menu">
+    <li class="nav-item">
+        <a href="index.html" class="nav-link">HOME</a>
+    </li>
+   <li class="nav-item">
+        <a href="characters.html" class="nav-link">CHARACTERS</a>
+    </li>
+    <li class="nav-item">
+        <a href="glossary.html" class="nav-link">GLOSSARY</a>
+    </li>
+    <li class="nav-item">
+        <a href="story.html" class="nav-link">STORY</a>
+    </li>
+    <li class="nav-item">
+        <a href="external links.html" class="nav-link">EXTERNAL LINKS</a>
+    </li>
+</ul>
+
+            </nav>
+            
+        </header>
+        
+<main>
+    <!--Hero section-->
+    <section class="hero-section">
+   
+    <div class="hero-image-container">
+    <h2>this section is still in progress!</h2>
+    
+</div></div>
+ 
+</section>
+<!--Footer section-->
+<footer class="footer-section">
+    <div class="section-content">
+        <p class="credit"> 2026 © Coded by hunieday.</p>
+    </div>
+</footer>
+</main>
+<script src="script.js">document.addEventListener("DOMContentLoaded", () => {
+    const fadeElements = document.querySelectorAll(".scroll-fade");
+
+    const observerOptions = {
+        root: null,         // Uses the screen viewport
+        threshold: 0.15,    // Triggers when 15% of the element is visible
+        rootMargin: "0px"   // No extra clipping boundaries
+    };
+
+    const scrollObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Add the appear class to kick off the CSS animation
+                entry.target.classList.add("appear");
+                // Stop observing this element so the animation only happens once
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Tell the observer to watch all your hidden elements
+    fadeElements.forEach(element => {
+        scrollObserver.observe(element);
+    });
+});</script>
+    </body>
+</html>
